@@ -10,7 +10,7 @@ This app uses an in memory array as the "database."
 
 <u>`POST` message:</u> 
 
-`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "text":"I am an alabama football fan"}' http://localhost:5000/codingchallenge/api/v1.0/messages`
+`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "message":"I am an alabama football fan"}' http://localhost:5000/codingchallenge/api/v1.0/messages`
 
 <b>Output</b>:
 
@@ -27,7 +27,7 @@ Date: Tue, 26 Nov 2019 01:24:00 GMT
 
 <u>Attempt to `POST` with the same id</u>:
 
-`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "text":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
+`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "message":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
 
 <b>Output</b>: 
 
@@ -44,7 +44,7 @@ Date: Tue, 26 Nov 2019 01:26:42 GMT
 
 <u>Attempt to `POST` with a different id:</u>
 
-`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1235", "text":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
+`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1235", "message":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
 
 <b>Output</b>:
 
