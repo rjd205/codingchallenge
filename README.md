@@ -22,8 +22,26 @@ Date: Tue, 26 Nov 2019 01:24:00 GMT
 
 {
   "count": 6
-}`
+}
+`
 
+Attempt to `POST` with the same id
+
+`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "text":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
+
+Output: 
+
+`HTTP/1.0 400 BAD REQUEST
+Content-Type: text/html
+Content-Length: 145
+Server: Werkzeug/0.16.0 Python/3.6.5
+Date: Tue, 26 Nov 2019 01:26:42 GMT
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<title>400 Bad Request</title>
+<h1>Bad Request</h1>
+<p>You have already used this id</p>
+`
 
 
 
