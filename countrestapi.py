@@ -26,10 +26,10 @@ def create_message():
     message = [message for message in messages if message['id'] == request.json['id']]
     if (len(message) != 0):
         abort(400, "You have already used this id") #custom error for bad request
-    count += count_words(request.json['text'])
+    count += count_words(request.json['message'])
     message = {
         'id': request.json['id'],
-        'text': request.json['text'],
+        'message': request.json['message'],
     }
     messages.append(message)
     return jsonify({'count': count}), 201 #successful
@@ -42,7 +42,7 @@ def update_message(message_id):
     if (len(message) == 0):
         abort(404)
     message[0]['id'] = request.json.get('id', message[0]['id'])
-    message[0]['text'] = request.json.get('text', message[0]['text'])
+    message[0]['message'] = request.json.get('message', message[0]['message'])
     return jsonify({'message': message[0]})
 
 
