@@ -8,7 +8,7 @@ I ran my module by using `python3 countrestapi.py`
 
 This app uses an in memory array as the "database."
 
-Demo: 
+<u>`POST` message:</u> 
 
 `curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "text":"I am an alabama football fan"}' http://localhost:5000/codingchallenge/api/v1.0/messages`
 
@@ -25,7 +25,7 @@ Date: Tue, 26 Nov 2019 01:24:00 GMT
 }
 
 
-Attempt to `POST` with the same id
+<u>Attempt to `POST` with the same id</u>:
 
 `curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1234", "text":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
 
@@ -42,7 +42,7 @@ Date: Tue, 26 Nov 2019 01:26:42 GMT
 <h1>Bad Request</h1>
 <p>You have already used this id</p>
 
-Attempt to `POST` with a different id
+<u>Attempt to `POST` with a different id:</u>
 
 `curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1235", "text":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
 
@@ -59,9 +59,10 @@ Date: Tue, 26 Nov 2019 01:30:08 GMT
 }
 
 
-`GET` all current messages
+<u>`GET` all current messages</u>
 
 <b>Output</b>: 
+
 {
   "messages": [
     {
