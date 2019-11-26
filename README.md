@@ -61,6 +61,8 @@ Date: Tue, 26 Nov 2019 01:30:08 GMT
 
 <u>`GET` all current messages</u>
 
+`curl -i -H "Content-Type: application/json" http://localhost:5000/codingchallenge/api/v1.0/messages`
+
 <b>Output</b>: 
 
 {
