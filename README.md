@@ -67,11 +67,11 @@ Date: Tue, 26 Nov 2019 01:30:08 GMT
   "messages": [
     {
       "id": "1234", 
-      "text": "I am an alabama football fan"
+      "message": "I am an alabama football fan"
     }, 
     {
       "id": "1235", 
-      "text": "Tua is amazing."
+      "message": "Tua is amazing."
     }
   ]
 }
