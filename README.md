@@ -42,6 +42,36 @@ Date: Tue, 26 Nov 2019 01:26:42 GMT
 <h1>Bad Request</h1>
 <p>You have already used this id</p>
 
+Attempt to `POST` with a different id
+
+`curl -i -H "Content-Type: application/json" -X POST -d '{"id":"1235", "text":"Tua is amazing."}' http://localhost:5000/codingchallenge/api/v1.0/messages`
+
+<b>Output</b>:
+
+HTTP/1.0 201 CREATED
+Content-Type: application/json
+Content-Length: 17
+Server: Werkzeug/0.16.0 Python/3.6.5
+Date: Tue, 26 Nov 2019 01:30:08 GMT
+
+{
+  "count": 9
+}
 
 
+`GET` all current messages
+
+<b>Output</b>: 
+{
+  "messages": [
+    {
+      "id": "1234", 
+      "text": "I am an alabama football fan"
+    }, 
+    {
+      "id": "1235", 
+      "text": "Tua is amazing."
+    }
+  ]
+}
 
